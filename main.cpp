@@ -5,41 +5,35 @@
 int main()
 {
     std::string S;
-    std::getline(std::cin, S);//–í–≤–æ–¥–∏–º –Ω–∞—à —Ç–µ–∫—Å—Ç–± –ø—Ä–∏ —ç—Ç–æ–º –ø—Ä–æ–±–µ–ª –Ω–µ —è–≤–ª—è–µ—Ç—Å—è —Å–∏–º–≤–æ–ª–æ–º-—Ç–µ—Ä–º–∏–Ω–∞—Ç–æ—Ä–æ–º
+    bool ccc;
+    std::cout << "Enter your text:\n";
+    std::getline(std::cin, S);//¬‚Ó‰ËÏ Ì‡¯ ÚÂÍÒÚ· ÔË ˝ÚÓÏ ÔÓ·ÂÎ ÌÂ ˇ‚ÎˇÂÚÒˇ ÒËÏ‚ÓÎÓÏ-ÚÂÏËÌ‡ÚÓÓÏ
     int t = 0;
     for (int i=65;i<=90;++i)
     {
         long a = count(S.begin(),S.end(), static_cast<char>(i));
-        std::cout << "The part of " << static_cast<char> (i) << " is " << a << std::endl;//–ù–∞—Ö–æ–¥–∏–º –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ –∫–∞–∂–¥–æ–π –±—É–∫–≤—ã –≤ —Ç–µ–∫—Å—Ç–µ 
-        t = t + a;//–ü–µ—Ä–µ–º–µ–Ω–Ω–∞—è t –Ω–µ–æ–±—Ö–æ–¥–∏–º–∞ –¥–ª—è –≤—ã—á–∏—Å–ª–µ–Ω–∏–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–∞ –≤—Å–µ—Ö –±—É–∫–≤, –Ω–µ –≤—É–ª—é—á–∞—è –∏–Ω—ã–µ —Å–∏–º–≤–æ–ª—ã
+        std::cout << "The part of " << static_cast<char> (i) << " is " << a << std::endl;//Õ‡ıÓ‰ËÏ ÍÓÎË˜ÂÒÚ‚Ó Í‡Ê‰ÓÈ ·ÛÍ‚˚ ‚ ÚÂÍÒÚÂ
+        t = t + a;//œÂÂÏÂÌÌ‡ˇ t ÌÂÓ·ıÓ‰ËÏ‡ ‰Îˇ ‚˚˜ËÒÎÂÌËÂ ÍÓÎË˜ÂÒÚ‚‡ ‚ÒÂı ·ÛÍ‚, ÌÂ ‚ÛÎ˛˜‡ˇ ËÌ˚Â ÒËÏ‚ÓÎ˚
     }
-    std::cout << "The number of articles is " << t << std::endl;//–í—ã–≤–æ–¥–∏–º –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ –±—É–∫–≤ –Ω–∞ —ç–∫—Ä–∞–Ω, —ç—Ç–æ –Ω–µ–æ–±—Ö–æ–¥–∏–º–æ –¥–ª—è –ø–æ–¥—Å—á—ë—Ç–∞ —á–∞—Å—Ç–æ—Ç—ã –±—É–∫–≤
-    for (char i: S)//–¶–∏–∫–ª, –∫–æ—Ç–æ—Ä—ã–π –º–µ–Ω—è–µ—Ç –∑–∞—à–∏—Ñ—Ä–æ–≤–∞–Ω–Ω—ã–µ –±—É–∫–≤—ã –Ω–∞ –Ω–µ–æ–±—Ö–æ–¥–∏–º—ã–µ
-    if (i=='E') std::cout << 'O'; else
-    if (i=='T') std::cout << 'B'; else
-    if (i=='R') std::cout << 'U'; else
-    if (i=='G') std::cout << 'R'; else
-    if (i=='F') std::cout << 'E'; else
-    if (i=='I') std::cout << 'C'; else
-    if (i=='C') std::cout << 'D'; else
-    if (i=='D') std::cout << 'H'; else 
-    if (i=='N') std::cout << 'S'; else 
-    if (i=='L') std::cout << 'G'; else
-    if (i=='J') std::cout << 'P'; else
-    if (i=='X') std::cout << 'N'; else
-    if (i=='P') std::cout << 'A'; else
-    if (i=='O') std::cout << 'F'; else
-    if (i=='Y') std::cout << 'L'; else
-    if (i=='H') std::cout << 'I'; else 
-    if (i=='A') std::cout << 'T'; else 
-    if (i=='Z') std::cout << 'M'; else 
-    if (i=='W') std::cout << 'Y'; else
-    if (i=='B') std::cout << 'W'; else 
-    if (i=='U') std::cout << 'V'; else
-    if (i=='S') std::cout << 'K'; else
-    if (i=='V') std::cout << 'J'; else
-    if (i=='M') std::cout << 'X'; else
-    std::cout << i;//–í—ã–≤–æ–¥–∏–º —Ä–∞—Å—à–∏—Ñ—Ä–æ–≤–∞–Ω–Ω—ã–π —Ç–µ–∫—Å—Ç –Ω–∞ —ç–∫—Ä–∞–Ω
+    std::cout << "The number of articles is " << t << std::endl;//¬˚‚Ó‰ËÏ ÍÓÎË˜ÂÒÚ‚Ó ·ÛÍ‚ Ì‡ ˝Í‡Ì, ˝ÚÓ ÌÂÓ·ıÓ‰ËÏÓ ‰Îˇ ÔÓ‰Ò˜∏Ú‡ ˜‡ÒÚÓÚ˚ ·ÛÍ‚
+    do {
+        std::cout << "Enter a letter: ";
+        char x;
+        std::cin >> x;
+        std:: cout << "Enter a needed letter: ";
+        char y;
+        std::cin >> y;
+        for (int i=0; i< S.size(); ++i)
+        {
+            if (S[i]==x){
+                S[i]=y;
+            }
+        }
+        std::cout << S << std::endl;
+        std::cout << "Do you want to continue your work?\nYes - press 1;\nNo - press 0\n";
+        std::cin >> ccc;
+    }
+    while (ccc==1);
     std::cout << S << std::endl;
     return 0;
 }
